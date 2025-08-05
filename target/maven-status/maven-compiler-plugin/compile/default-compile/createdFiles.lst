@@ -1,0 +1,4 @@
+com/example/usermanager/service/UserService.class
+com/example/usermanager/model/User.class
+com/example/usermanager/controller/UserController.class
+com/example/usermanager/UserManagerApplication.class

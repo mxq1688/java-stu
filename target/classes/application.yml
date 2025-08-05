@@ -1,0 +1,36 @@
+# Spring Boot 配置文件
+server:
+  port: 8080                    # 服务器端口
+  servlet:
+    context-path: /             # 应用根路径
+
+spring:
+  application:
+    name: user-manager          # 应用名称
+  
+  # Thymeleaf模板配置
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false                # 开发环境关闭缓存
+    encoding: UTF-8
+    
+  # 开发工具配置
+  devtools:
+    restart:
+      enabled: true             # 启用热重载
+
+# 日志配置
+logging:
+  level:
+    com.example.usermanager: DEBUG
+    org.springframework.web: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# 管理端点配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info 
